@@ -1,0 +1,21 @@
+{
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.wrangler": true,
+    "**/.agents": false,
+    "**/.agent": false,
+    "**/.vscode": true,
+    "**/.DS_Store": true,
+    "**/dist": true,
+    "scripts": true,
+    "migrations": true,
+    "test": true,
+    "package-lock.json": true,
+    "skills-lock.json": true,
+    "LICENSE": true,
+    "**/fonts": true,
+    "**/*.png": true,
+    "**/*.svg": true
+  },
+  "explorer.compactFolders": false
+}

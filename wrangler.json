@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hack-days-item-board",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-09",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "hack-days-item-board",
+      "database_id": "8c9b82a0-7f34-428e-98b5-3f8bec82b94b",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

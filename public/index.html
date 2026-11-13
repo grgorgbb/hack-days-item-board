@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Item Board · MLH</title>
+    <link rel="icon" href="/mlh-logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="https://www.mlh.com/" aria-label="Major League Hacking"><img src="/mlh-logo.svg" alt="MLH" width="86" height="36" /></a>
+      <span class="header-label">Hack Days</span>
+      <a class="partner" href="https://www.cloudflare.com/" aria-label="Cloudflare"><img src="/cloudflare-logo.png" alt="Cloudflare" width="110" /></a>
+    </header>
+    <main>
+      <div class="workspace">
+        <section class="compose panel" aria-labelledby="form-heading">
+          <h2 id="form-heading">New item</h2>
+          <form id="item-form">
+            <label for="title">Title</label>
+            <input id="title" name="title" maxlength="120" required />
+            <label for="body">Details</label>
+            <textarea id="body" name="body" maxlength="2000" rows="5"></textarea>
+            <div class="actions">
+              <button type="submit" id="save">Save</button>
+              <button type="button" id="cancel" class="quiet" hidden>Cancel</button>
+            </div>
+          </form>
+        </section>
+        <section class="collection" aria-labelledby="board-heading">
+          <div class="section-label">
+            <h1 id="board-heading">Items</h1>
+            <span id="count" class="count">0</span>
+          </div>
+          <p id="status" role="status" aria-live="polite"></p>
+          <div id="items" class="cards"></div>
+        </section>
+      </div>
+      <footer>Cloudflare · Workers · D1</footer>
+    </main>
+  </body>
+</html>
